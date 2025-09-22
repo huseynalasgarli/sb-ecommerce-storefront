@@ -28,4 +28,18 @@ This project aims to provide a lightweight, containerized solution for managing 
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/your-username/storefront-commerce.git
+```
+
+### 2️⃣ Update application.yml (or application.properties) with your database credentials:
+```bash
 cd storefront-commerce
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/storefront
+    username: postgres
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+```
